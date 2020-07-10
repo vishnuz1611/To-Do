@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="alert alert-success" role="alert">
+    <h4 class="alert-heading">Warning!!</h4>
+    <p>Are you sure you wanna delete?</p>
+    <hr>
+    <a href="{% url 'index' %}">Cancel</a>
+  </div>
+
+  <form action="" method="POST">
+    {% csrf_token %}
+    <input type="submit" name="Confirm">  
+  </form>
+
+{% endblock %}
